@@ -98,6 +98,12 @@ Example:
     meson compile -C build
     meson install -C build
 
+To run the most common local checks before opening a pull request:
+
+    ruff check .
+    meson setup build
+    meson test -C build
+
 For libplacebo, meson can use a git check out as a subproject for a convenient
 way to compile mpv if a sufficient libplacebo version is not easily available
 in the build environment. It will be statically linked with mpv. Example:
